@@ -9,7 +9,7 @@ for line in lines:
 	fields=line.rstrip().split(",")
 	if fields[0] == "Time [s]":
 		continue
-	result=fields[2]
+	result=fields[1]
 	if result == "' '":
 		result=" "
 	if result == "COMMA":
