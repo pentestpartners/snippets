@@ -8,11 +8,8 @@ class MyDelegate(DefaultDelegate):
 
     def handleNotification(self, cHandle, data):
         print "Button Pressed"
-        nsvc=p.getServiceByUUID(UUID("00001802-0000-1000-8000-00805f9b34fb"))
-        nch=nsvc.getCharacteristics(UUID("00002a06-0000-1000-8000-00805f9b34fb"))[0].getHandle()
-        p.writeCharacteristic(nch,b'\01')
 
-p = Peripheral('ff:ff:80:02:5d:c5')
+p = Peripheral('FF:FF:80:02:5B:41')
 p.setDelegate(MyDelegate())
 print "Connected to device"
 
